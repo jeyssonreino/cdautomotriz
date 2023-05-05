@@ -5,6 +5,7 @@ import RegisterView from '../views/RegisterView.vue'
 import NosotrosView from '../views/NosotrosView.vue'
 import DashboardView from '../views/DashboardView.vue'
 import ApiView from '../views/ApiView.vue'
+import GuardarView from '../views/GuardarView.vue'
 
  
 
@@ -40,6 +41,11 @@ const router = createRouter({
       path: '/ApiView',
       name: 'ApiView',
       component: ApiView
+    },
+    {
+      path: '/GuardarView',
+      name: 'GuardarView',
+      component: GuardarView
     },
 
 

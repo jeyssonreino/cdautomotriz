@@ -1,11 +1,13 @@
-
-
-
 <template>
 
     <div style="display: flex; justify-content: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;margin-top: 40px ;margin-bottom: 40px;" >
         <h1 >Tabla de clientes</h1>
     </div>
+    <div style="margin-left: 40px;">    
+        <router-link to="/GuardarView"><button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">Guardar</button></router-link>
+</div>
+
+
  <div style="display: flex; justify-content: center;">
     <div class="relative overflow-x-auto" >
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -104,6 +106,7 @@ export default (await import('vue')).defineComponent({
     methods: {
         eliminar(id) {
             axios.delete('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/'+ id )
+            location.reload();
         },
 
         guardar(){
@@ -123,3 +126,5 @@ export default (await import('vue')).defineComponent({
 
 
 </script>
+
+<router-view></router-view>
