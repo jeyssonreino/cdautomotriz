@@ -58,17 +58,19 @@ export default {
         PhoneNumber: this.telefono,
         Email: this.email,
         Vehicle: this.automovil,
-        JobTitle: this.automovil
+        JobTitle: this.empleo
       };
       
       axios.post('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes', data)
         .then(response => {
           console.log(response.data);
-          location.reload();
+          alert("Registro guardado exitosamente");
+          window.location.href = "/ApiView";
+
 
         })
         .catch(error => {
-          console.log(error);
+          alert("Error");
 
         });
     }
