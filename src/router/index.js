@@ -10,6 +10,9 @@ import EditarView from '../views/EditarView.vue'
 import MecanicosView from '../views/MecanicosView.vue'
 import GuardarMView from '../views/GuardarMView.vue'
 import EditarMView from '../views/EditarMView.vue'
+import ResultadosView from '../views/ResultadosView.vue'
+import GuardarVView from '../views/GuardarVView.vue'
+import EditarVView from '../views/EditarVView.vue'
 
 
  
@@ -71,6 +74,21 @@ const router = createRouter({
       path: '/EditarMView/:id',
       name: 'EditarMView',
       component: EditarMView
+    },
+    {
+      path: '/ResultadosView',
+      name: 'ResultadosView',
+      component: ResultadosView
+    },
+    {
+      path: '/GuardarVView',
+      name: 'GuardarVView',
+      component: GuardarVView
+    },
+    {
+      path: '/EditarVView/:id',
+      name: 'EditarVView',
+      component: EditarVView
     },
 
 

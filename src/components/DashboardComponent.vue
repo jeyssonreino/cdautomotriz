@@ -92,7 +92,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="/ResultadosView"
                 class="flex items-center p-2 text-white rounded-lg dark:text-white hover:bg-cyan-700 dark:hover:bg-gray-700"
               >
                 <svg
