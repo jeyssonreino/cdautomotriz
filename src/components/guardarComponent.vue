@@ -65,7 +65,7 @@ export default {
         .then(response => {
           console.log(response.data);
           alert("Registro guardado exitosamente");
-          window.location.href = "/ApiView";
+          window.location.href = "/DashboardView";
 
 
         })

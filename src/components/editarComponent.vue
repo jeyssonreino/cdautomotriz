@@ -130,7 +130,7 @@ export default (await import('vue')).defineComponent({
           console.log(response.data);
           alert("Registro actualizado exitosamente")
           
-          window.location.href = "/ApiView";
+          window.location.href = "/DashboardView";
         })
         .catch(error => {
             alert("Error")
