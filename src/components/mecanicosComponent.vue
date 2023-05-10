@@ -1,5 +1,5 @@
 <template>
-  <div style="display: flex">
+      <div style="display: flex">
     <div>
       <button
         data-drawer-target="default-sidebar"
@@ -126,10 +126,10 @@
           margin-bottom: 40px;
         "
       >
-        <h1>Tabla de turnos</h1>
+        <h1>Mecanicos registrados</h1>
       </div>
       <div style="margin-left: 40px">
-        <router-link to="/GuardarView"
+        <router-link to="/GuardarMView"
           ><button
             type="button"
             class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
@@ -148,44 +148,37 @@
               <tr>
                 <th scope="col" class="px-6 py-3">#</th>
                 <th scope="col" class="px-6 py-3">Nombre</th>
-                <th scope="col" class="px-6 py-3">Teléfono</th>
+                <th scope="col" class="px-6 py-3">Apellido</th>
                 <th scope="col" class="px-6 py-3">Email</th>
-                <th scope="col" class="px-6 py-3">Automovil</th>
-                <th scope="col" class="px-6 py-3">Empleo</th>
                 <th scope="col" class="px-6 py-3">Acciones</th>
               </tr>
             </thead>
             <tbody>
               <tr
-                v-for="clientes in listado"
-                :key="clientes.id"
+                v-for="mecanicos in listado"
+                :key="mecanicos.id"
                 class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
               >
                 <th
                   scope="row"
                   class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  {{ clientes.id }}
+                  {{ mecanicos.id }}
                 </th>
                 <td class="px-6 py-4">
-                  {{ clientes.FirstName }}
+                  {{ mecanicos.FirstName }}
                 </td>
                 <td class="px-6 py-4">
-                  {{ clientes.PhoneNumber }}
+                  {{ mecanicos.LastName }}
                 </td>
                 <td class="px-6 py-4">
-                  {{ clientes.Email }}
+                  {{ mecanicos.Email }}
                 </td>
-                <td class="px-6 py-4">
-                  {{ clientes.Vehicle }}
-                </td>
-                <td class="px-6 py-4">
-                  {{ clientes.JobTitle }}
-                </td>
+
                 <td class="px-6 py-4">
                   <div style="display: flex">
                     <div>
-                      <router-link :to="'/EditarView/' + clientes.id">
+                      <router-link :to="'/EditarMView/' + mecanicos.id">
                         <button
                           type="button"
                           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
@@ -197,7 +190,7 @@
                     <div>
                       <button
                         type="button"
-                        @click="eliminar(clientes.id)"
+                        @click="eliminar(mecanicos.id)"
                         class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
                       >
                         Eliminar
@@ -212,6 +205,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -225,7 +219,7 @@ export default (await import('vue')).defineComponent({
   },
 
   mounted() {
-    axios.get('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes').then((response) => {
+    axios.get('https://apigenerator.dronahq.com/api/0pTs3Aom/mecanicos').then((response) => {
       this.listado = response.data
     })
   },
@@ -233,7 +227,7 @@ export default (await import('vue')).defineComponent({
   methods: {
     eliminar(id) {
       axios
-        .delete('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/' + id)
+        .delete('https://apigenerator.dronahq.com/api/0pTs3Aom/mecanicos/' + id)
         .then((response) => {
           alert('Registro eliminado exitosamente')
           setTimeout(() => {
@@ -246,10 +240,10 @@ export default (await import('vue')).defineComponent({
     },
 
     guardar() {
-      axios.post('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes')
+      axios.post('https://apigenerator.dronahq.com/api/0pTs3Aom/mecanicos')
     },
     editar() {
-      axios.put('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/1')
+      axios.put('https://apigenerator.dronahq.com/api/0pTs3Aom/mecanicos/1')
     }
   }
 })

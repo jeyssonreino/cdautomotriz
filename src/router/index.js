@@ -7,6 +7,9 @@ import DashboardView from '../views/DashboardView.vue'
 import ApiView from '../views/ApiView.vue'
 import GuardarView from '../views/GuardarView.vue'
 import EditarView from '../views/EditarView.vue'
+import MecanicosView from '../views/MecanicosView.vue'
+import GuardarMView from '../views/GuardarMView.vue'
+import EditarMView from '../views/EditarMView.vue'
 
 
  
@@ -54,6 +57,22 @@ const router = createRouter({
       name: 'EditarView',
       component: EditarView
     },
+    {
+      path: '/MecanicosView',
+      name: 'MecanicosView',
+      component: MecanicosView
+    },
+    {
+      path: '/GuardarMView',
+      name: 'GuardarMView',
+      component: GuardarMView
+    },
+    {
+      path: '/EditarMView/:id',
+      name: 'EditarMView',
+      component: EditarMView
+    },
+
 
 
 
