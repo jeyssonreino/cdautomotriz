@@ -6,12 +6,13 @@ import footerComponents from '../components/footerComponents.vue';
 import infocardComponent from '../components/infocardComponent.vue';
 import sliderComponent from '../components/icons/sliderComponent.vue';
 import guradarMComponentVue from '../components/guradarMComponent.vue';
+import header2Component from '../components/header2Component.vue';
 
 </script>
 
 <template>
   <main>
-    <header-component></header-component>
+    <header2Component></header2Component>
     <guradarMComponentVue></guradarMComponentVue>
     <footer-components></footer-components>
 
