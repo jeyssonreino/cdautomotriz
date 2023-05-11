@@ -1,5 +1,8 @@
 
 <template>
+    <div style="display: flex; justify-content: center; margin-top: 20px; font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ;">
+    <h1>Editar mecánico</h1>
+  </div>
     <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 100px">
       <form @submit.prevent="enviarFormulario">
         <div class="grid gap-6 mb-6 md:grid-cols-2">

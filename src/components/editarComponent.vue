@@ -1,5 +1,8 @@
 
 <template>
+    <div style="display: flex; justify-content: center; margin-top: 20px; font-size: 30px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ;">
+    <h1>Editar turno</h1>
+  </div>
   <div style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 100px">
     <form @submit.prevent="enviarFormulario">
       <div class="grid gap-6 mb-6 md:grid-cols-2">
@@ -98,13 +101,13 @@ export default (await import('vue')).defineComponent({
         numero: '',
         email: '',
         automovil: '',
-        empleo: '',
+        empleo: ''
       }
     }
   },
 
   mounted() {
-    this.id = this.$route.params.id;
+    this.id = this.$route.params.id
     axios
       .get(`https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/${this.id}`)
       .then((response) => {
@@ -122,22 +125,24 @@ export default (await import('vue')).defineComponent({
         PhoneNumber: this.numero,
         Email: this.emaill,
         Vehicle: this.automovil,
-        JobTitle: this.empleo 
-      };
- 
-      axios.put(`https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/${this.id}`, this.cliente)
-        .then(response => {
-          console.log(response.data);
-          alert("Registro actualizado exitosamente")
-          
-          window.location.href = "/DashboardView";
+        JobTitle: this.empleo
+      }
+
+      axios
+        .put(
+          `https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/${this.id}`,
+          this.cliente
+        )
+        .then((response) => {
+          console.log(response.data)
+          alert('Registro actualizado exitosamente')
+
+          window.location.href = '/DashboardView'
         })
-        .catch(error => {
-            alert("Error")
-
-        });
+        .catch((error) => {
+          alert('Error')
+        })
     }
-
   }
 })
 </script>

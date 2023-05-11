@@ -6,6 +6,7 @@
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       margin-top: 40px;
       margin-bottom: 40px;
+
     "
   >
     <h1>Tabla de clientes</h1>
