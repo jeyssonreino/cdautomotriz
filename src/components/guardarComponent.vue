@@ -66,11 +66,11 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Empleo</label
+            >Fecha</label
           >
           <input
-            v-model="empleo"
-            type="text"
+            v-model="fecha"
+            type="date"
             id="first_name"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
@@ -98,7 +98,7 @@ export default {
       telefono: '',
       email: '',
       automovil: '',
-      empleo: ''
+      fecha: ''
     }
   },
   methods: {
@@ -108,11 +108,11 @@ export default {
         PhoneNumber: this.telefono,
         Email: this.email,
         Vehicle: this.automovil,
-        JobTitle: this.empleo
+        Date: this.fecha
       }
 
       axios
-        .post('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes', data)
+        .post('https://apigenerator.dronahq.com/api/f8_kVs6m/turnos', data)
         .then((response) => {
           console.log(response.data)
           alert('Registro guardado exitosamente')

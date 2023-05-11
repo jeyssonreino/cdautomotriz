@@ -151,7 +151,7 @@
                 <th scope="col" class="px-6 py-3">Teléfono</th>
                 <th scope="col" class="px-6 py-3">Email</th>
                 <th scope="col" class="px-6 py-3">Automovil</th>
-                <th scope="col" class="px-6 py-3">Empleo</th>
+                <th scope="col" class="px-6 py-3">Fecha</th>
                 <th scope="col" class="px-6 py-3">Acciones</th>
               </tr>
             </thead>
@@ -180,7 +180,7 @@
                   {{ clientes.Vehicle }}
                 </td>
                 <td class="px-6 py-4">
-                  {{ clientes.JobTitle }}
+                  {{ clientes.Date }}
                 </td>
                 <td class="px-6 py-4">
                   <div style="display: flex">
@@ -225,7 +225,7 @@ export default (await import('vue')).defineComponent({
   },
 
   mounted() {
-    axios.get('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes').then((response) => {
+    axios.get('https://apigenerator.dronahq.com/api/f8_kVs6m/turnos').then((response) => {
       this.listado = response.data
     })
   },
@@ -233,7 +233,7 @@ export default (await import('vue')).defineComponent({
   methods: {
     eliminar(id) {
       axios
-        .delete('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/' + id)
+        .delete('https://apigenerator.dronahq.com/api/f8_kVs6m/turnos/' + id)
         .then((response) => {
           alert('Registro eliminado exitosamente')
           setTimeout(() => {
@@ -246,10 +246,10 @@ export default (await import('vue')).defineComponent({
     },
 
     guardar() {
-      axios.post('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes')
+      axios.post('https://apigenerator.dronahq.com/api/f8_kVs6m/turnos')
     },
     editar() {
-      axios.put('https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/1')
+      axios.put('https://apigenerator.dronahq.com/api/f8_kVs6m/turnos/1')
     }
   }
 })

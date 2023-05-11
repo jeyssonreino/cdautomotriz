@@ -66,12 +66,12 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Empleo</label
+            >Fecha</label
           >
           <input
-            v-model="cliente.JobTitle"
-            type="text"
-            id="empleo"
+            v-model="cliente.Date"
+            type="datetime"
+            id="fecha"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             required
           />
@@ -101,7 +101,7 @@ export default (await import('vue')).defineComponent({
         numero: '',
         email: '',
         automovil: '',
-        empleo: ''
+        fecha: ''
       }
     }
   },
@@ -109,7 +109,7 @@ export default (await import('vue')).defineComponent({
   mounted() {
     this.id = this.$route.params.id
     axios
-      .get(`https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/${this.id}`)
+      .get(`https://apigenerator.dronahq.com/api/f8_kVs6m/turnos/${this.id}`)
       .then((response) => {
         this.cliente = response.data
       })
@@ -125,12 +125,12 @@ export default (await import('vue')).defineComponent({
         PhoneNumber: this.numero,
         Email: this.emaill,
         Vehicle: this.automovil,
-        JobTitle: this.empleo
+        Date: this.fecha
       }
 
       axios
         .put(
-          `https://apigenerator.dronahq.com/api/mQuVTsXk/mostrarClientes/${this.id}`,
+          `https://apigenerator.dronahq.com/api/f8_kVs6m/turnos/${this.id}`,
           this.cliente
         )
         .then((response) => {

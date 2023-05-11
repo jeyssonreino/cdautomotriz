@@ -18,7 +18,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Nombre</label
+            >Vehiculo</label
           >
           <input
             v-model="vehiculo"
@@ -32,7 +32,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Teléfono</label
+            >Cilindros</label
           >
           <input
             v-model="cilindros"
@@ -46,7 +46,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >email</label
+            >Desplazamiento</label
           >
           <input
             v-model="desplazamiento"
@@ -60,7 +60,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Automovil</label
+            >MPG</label
           >
           <input
             v-model="mpg"
@@ -74,7 +74,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Empleo</label
+            >Peso</label
           >
           <input
             v-model="peso"
@@ -88,7 +88,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Empleo</label
+            >Aceleración</label
           >
           <input
             v-model="aceleracion"
@@ -102,7 +102,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Empleo</label
+            >Modelo</label
           >
           <input
             v-model="modelo"
@@ -116,7 +116,7 @@
           <label
             for="first_name"
             class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >Empleo</label
+            >Caballos de fuerza</label
           >
           <input
             v-model="caballos"
